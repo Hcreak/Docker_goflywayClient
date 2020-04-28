@@ -9,16 +9,14 @@
 * 访问Webconsole位于容器所在设备的1091端口
 
 * **2020.3 Fix**  创建容器时通过环境变量$UP和$KEY指定参数
+* **2020.4 Fix**  修改使用WebSocket模式（抓包发现默认的HTTP效率太低）
 
 ## build and run:
-    ~~//download and edit run.sh~~
-	~~docker build -t goflyway .~~
-	~~//docker run -d -p 0.0.0.0:1081:1081 -p 0.0.0.0:1091:1091 --name mygoflyway goflyway~~
-    ~~docker run -d --network=host --name mygoflyway goflyway~~
     //2020.3 Fix
     docker build -t goflyway_client .
     docker run -d --network=host -e UP='' -e KEY='' --name mygoflyway goflyway
 
 ## Thanks:
-  github.com/coyove/goflyway
-  github.com/boutell/rinetd
+  [github.com/coyove/goflyway](https://github.com/coyove/goflyway)
+
+  [github.com/boutell/rinetd](https://github.com/boutell/rinetd)
