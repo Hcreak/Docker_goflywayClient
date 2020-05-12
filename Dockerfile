@@ -10,6 +10,7 @@ WORKDIR /goflyway
 
 ADD . .
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+RUN chmod +x goflyway-ARM
 RUN chmod +x run.sh
 
 CMD ["./run.sh"]
